@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Assets_Vulnerability_Report</title>
+</head>
+<body>
+<table>
+	<tr>
+{% for i in headings %}
+
+	<th>{{i}}</th>
+{% endfor %}
+</tr>
+
+{% for row in data %}
+<tr>
+	{% for cell in row %}
+	<td>{{ cell }}</td>
+	{% endfor %}
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
