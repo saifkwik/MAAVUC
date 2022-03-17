@@ -1,9 +1,6 @@
 import time
-
 import dns.resolver
-
 import requests
-
 import bevigil_asset
 import pprint
 import concurrent.futures
@@ -59,7 +56,6 @@ print("Total Hostnames found in APP: " + str(len(bevigil_asset.hostnames)))
 print(bevigil_asset.ip)
 print('Direct IPs disclosed in app: ' + str(len(result)))
 
-
 # Thread to make the Loop run faster:
 with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
     f = {executor.submit(get_ip_from_hostname, h): h for h in bevigil_asset.hostnames}
@@ -69,6 +65,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
             futures = future.result()
             result.append(futures)
 
+result = list(set(result))
 print('IPs found from Hostnames :' + str(len(result) - direct_ip))
 print('Total Ip in APP = Disclosed IPs + IPs found from Hostnames :' + str(len(result)))
 print(result)
@@ -90,4 +87,4 @@ ip_result = list(filter(None, ip_result))
 pprint.pprint('Information from Ips Found: ' + str(len(ip_result)))
 
 t2 = time.perf_counter()
-print(f'Time taken: {t2-bevigil_asset.t1} seconds')
+print(f'Time taken: {t2 - bevigil_asset.t1} seconds')
