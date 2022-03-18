@@ -24,4 +24,4 @@ Run `flask run` to :
 * generates the report in tabular form.
 
 
-![alt text](https://github.com/saifkwik/MAAVUC/blob/main/report_screenshot.png)
+![alt text](https://github.com/saifkwik/MAAVUC/blob/main/screenshot.png)
