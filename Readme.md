@@ -3,7 +3,8 @@
 Enter app id and using  Osint Api it generates hostnames and IP address disclosed in the app.
 Using dns_resolver it resolves IP of hostnames from assets and by using Internet DB Shodan API to 
 generate vulnerability report of Disclosed IP and IP found in hostname assets of the APP in HTML format 
-which is generated using FLASK API and can be viewed in web browser.
+which is generated using FLASK API and can be viewed in web browser. For Total IPs in the APP I use GeoIP2 database
+to gather info of the City & Country of the IP.
 
 
 ## Installation

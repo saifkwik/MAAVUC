@@ -1,0 +1,74 @@
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: #000000;
+  text-align: middle !important;
+  font-size: 20px !important;
+  font-family: 'Open Sans';
+ }
+ tr:nth-child(even) {
+  background: rgba(50, 50, 50, 0.1);
+}
+
+ tr:nth-child(odd) {
+  background: rgba(30, 30, 30, 0.3);
+}
+ th:nth-child(6) {
+ color: #ff0000;
+ }
+
+ th:nth-child(3) {
+ color: #96f8fa;
+ }
+
+.tbl-content{
+  height:1500px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(19,23,20,0.3);
+  nth-child(6)-color: #ff0000
+}
+th{
+  padding: 20px 40px;
+  text-align: middle;
+  font-weight: 100;
+  font-family: "Times New Roman", Times, serif;
+  color: #51c851;
+  text-transform: uppercase;
+}
+td{
+  padding: 25px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  color: #fff;
+}
+td:nth-child(6){
+color: #ff0000;
+}
+td:nth-child(3){
+color: #96f8fa;
+font-size: 22px;
+}
+
+body{
+background: linear-gradient(to right, #2c3e50, #000000);
+  counter-reset: Serial;
+}
+tr td:first-child:before{
+  counter-increment: Serial;      /* Increment the Serial counter */
+  content:counter(Serial);
+  color: #bafc03;
+  padding: 15px;/* Display the counter */
+}
+
+::-webkit-scrollbar {
+    width: 18px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,3);
+}
